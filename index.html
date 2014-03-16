@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>  PRESENTATION TITLE  </title>
+		<meta name="description" content="  PRESENTATION DESCRIPTION  ">
+
+		<meta name="author" content="Karl Stolley">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../reveal.js/css/reveal.min.css">
+		<link rel="stylesheet" href="../reveal.js/css/theme/sky.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+		<!--[if lt IE 9]>
+		<script src="../reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+			  <section>
+			    <h1>One</h1>
+			  </section>
+
+			  <section>
+			    <h2>Two</h2>
+			  </section>
+
+			<!-- /.slides -->
+			</div>
+
+		<!-- /.reveal -->
+		</div>
+
+		<script src="../reveal.js/lib/js/head.min.js"></script>
+		<script src="../reveal.js/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: false,
+				history: true,
+				center: true,
+
+				transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+				transitionSpeed: 'fast',
+
+        multiplex: {
+          secret: null,
+          id: 'e6068a2dfaf4c6e1', // id, obtained from socket.io server
+          url: 'ksrevealjs.jit.su:80' // Location of socket.io server
+        },
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.10/socket.io.min.js', async: true },
+					//{ src: '../reveal.js/plugin/multiplex/master.js', async: true }
+					// Remove next line if master; add secret to multiplex: above
+          { src: '../reveal.js/plugin/multiplex/client.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
+
